@@ -1,0 +1,7 @@
+
+{
+  "emailAddress": "romania@gmail.com",
+  "password":"test12345",
+  "errorMessage": "testez sa vad daca compara bine",
+  "validCredentials": false
+}
