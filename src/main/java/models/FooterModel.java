@@ -1,197 +1,205 @@
 package models;
 
+/**
+ * Created by casab on 11/3/2017.
+ */
 public class FooterModel {
-    private String Company;
-    private String Team;
-    private String Careers;
-    private String Blog;
-    private String PressReleases;
-    private String ContactUs;
-    private String ForFamilies;
-    private String ForSchools;
-    private String ForBusiness;
-    private String Resellers;
-    private String Partners;
-    private String Affiliates;
-    private String Help;
-    private String SystemRequirements;
-    private String Resourcesforparents;
-    private String Sitemap;
-    private String Facebook;
-    private String Linkedin;
-    private String Twitter;
-    private String TermsOfService;
-    private String PrivacyPolicy;
-
+    private String company;
+    private String team;
+    private String careers;
+    private String blog;
+    private String pressReleases;
+    private String contactUs;
+    private String forFamilies;
+    private String forSchools;
+    private String forBusiness;
+    private String resellers;
+    private String partners;
+    private String affiliates;
+    private String help;
+    private String systemRequirements;
+    private String resourcesForParents;
+    private String sitemap;
+    private String facebook;
+    private String linkedin;
+    private String twitter;
+    private String termsOfService;
+    private String privacyPolicy;
+    private String copyRightText;
 
     public String getCompany() {
-        return Company;
+        return company;
     }
 
     public void setCompany(String company) {
-        Company = company;
+        this.company = company;
     }
 
     public String getTeam() {
-        return Team;
+        return team;
     }
 
     public void setTeam(String team) {
-        Team = team;
+        this.team = team;
     }
 
     public String getCareers() {
-        return Careers;
+        return careers;
     }
 
     public void setCareers(String careers) {
-        Careers = careers;
+        this.careers = careers;
     }
 
     public String getBlog() {
-        return Blog;
+        return blog;
     }
 
     public void setBlog(String blog) {
-        Blog = blog;
+        this.blog = blog;
     }
 
     public String getPressReleases() {
-        return PressReleases;
+        return pressReleases;
     }
 
     public void setPressReleases(String pressReleases) {
-        PressReleases = pressReleases;
+        this.pressReleases = pressReleases;
     }
 
     public String getContactUs() {
-        return ContactUs;
+        return contactUs;
     }
 
     public void setContactUs(String contactUs) {
-        ContactUs = contactUs;
+        this.contactUs = contactUs;
     }
 
     public String getForFamilies() {
-        return ForFamilies;
+        return forFamilies;
     }
 
     public void setForFamilies(String forFamilies) {
-        ForFamilies = forFamilies;
+        this.forFamilies = forFamilies;
     }
 
     public String getForSchools() {
-        return ForSchools;
+        return forSchools;
     }
 
     public void setForSchools(String forSchools) {
-        ForSchools = forSchools;
+        this.forSchools = forSchools;
     }
 
     public String getForBusiness() {
-        return ForBusiness;
+        return forBusiness;
     }
 
     public void setForBusiness(String forBusiness) {
-        ForBusiness = forBusiness;
+        this.forBusiness = forBusiness;
     }
 
     public String getResellers() {
-        return Resellers;
+        return resellers;
     }
 
     public void setResellers(String resellers) {
-        Resellers = resellers;
+        this.resellers = resellers;
     }
 
     public String getPartners() {
-        return Partners;
+        return partners;
     }
 
     public void setPartners(String partners) {
-        Partners = partners;
+        this.partners = partners;
     }
 
     public String getAffiliates() {
-        return Affiliates;
+        return affiliates;
     }
 
     public void setAffiliates(String affiliates) {
-        Affiliates = affiliates;
+        this.affiliates = affiliates;
     }
 
     public String getHelp() {
-        return Help;
+        return help;
     }
 
     public void setHelp(String help) {
-        Help = help;
+        this.help = help;
     }
 
     public String getSystemRequirements() {
-        return SystemRequirements;
+        return systemRequirements;
     }
 
     public void setSystemRequirements(String systemRequirements) {
-        SystemRequirements = systemRequirements;
+        this.systemRequirements = systemRequirements;
     }
 
-    public String getResourcesforparents() {
-        return Resourcesforparents;
+    public String getResourcesForParents() {
+        return resourcesForParents;
     }
 
-    public void setResourcesforparents(String resourcesforparents) {
-        Resourcesforparents = resourcesforparents;
+    public void setResourcesForParents(String resourcesForParents) {
+        this.resourcesForParents = resourcesForParents;
     }
 
     public String getSitemap() {
-        return Sitemap;
+        return sitemap;
     }
 
     public void setSitemap(String sitemap) {
-        Sitemap = sitemap;
+        this.sitemap = sitemap;
     }
 
     public String getFacebook() {
-        return Facebook;
+        return facebook;
     }
 
     public void setFacebook(String facebook) {
-        Facebook = facebook;
+        this.facebook = facebook;
     }
 
     public String getLinkedin() {
-        return Linkedin;
+        return linkedin;
     }
 
     public void setLinkedin(String linkedin) {
-        Linkedin = linkedin;
+        this.linkedin = linkedin;
     }
 
     public String getTwitter() {
-        return Twitter;
+        return twitter;
     }
 
     public void setTwitter(String twitter) {
-        Twitter = twitter;
+        this.twitter = twitter;
     }
 
     public String getTermsOfService() {
-        return TermsOfService;
+        return termsOfService;
     }
 
     public void setTermsOfService(String termsOfService) {
-        TermsOfService = termsOfService;
+        this.termsOfService = termsOfService;
     }
 
     public String getPrivacyPolicy() {
-        return PrivacyPolicy;
+        return privacyPolicy;
     }
 
     public void setPrivacyPolicy(String privacyPolicy) {
-        PrivacyPolicy = privacyPolicy;
+        this.privacyPolicy = privacyPolicy;
     }
 
+    public String getCopyRightText() {
+        return copyRightText;
+    }
 
+    public void setCopyRightText(String copyRightText) {
+        this.copyRightText = copyRightText;
+    }
 }
-

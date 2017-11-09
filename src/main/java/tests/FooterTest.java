@@ -1,10 +1,10 @@
 package tests;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import models.FooterModel;
 import models.HeaderModel;
+import models.HomeSignUpModel;
+import models.LoginModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -20,113 +20,117 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
+/**
+ * Created by casab on 11/3/2017.
+ */
 public class FooterTest extends BaseTestPublicSite {
-    @DataProvider(name = "footerSiteJson")
-    public Iterator<Object[]> jsonfooterDataProvider() throws IOException {
+    @DataProvider(name = "FooterUrls")
+    public Iterator<Object[]> jsonLoginDataProvider() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-       // objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         Collection<Object[]> dp = new ArrayList<>();
 
         File[] files = getListOfFiles("footerSiteJson");
         for (File f : files) {
             FooterModel m = objectMapper.readValue(f, FooterModel.class);
-           dp.add(new Object[]{m});
-
+            dp.add(new Object[]{m});
         }
-
         return dp.iterator();
     }
 
-    @Test(dataProvider = "footerSiteJson")
-    public void FooterSiteUrlsTest (FooterModel footerModel) throws InterruptedException {
-        FooterPage footerPage = PageFactory.initElements(driver, FooterPage.class);
+    @Test(dataProvider = "FooterUrls")
+    public void footerrUrlsTest (FooterModel footerModel) throws InterruptedException {
+        FooterPage footerpage = PageFactory.initElements(driver, FooterPage.class);
         Thread.sleep(1000);
 
 
 
-        driver.get("http://qustodio.com/en/");
-        footerPage.clickCompanyLink();
-        Assert.assertEquals(driver.getCurrentUrl(),footerModel.getCompany());
+        driver.get("http://pre.qustodio.com/en/");
+        footerpage.clickCompanyLink();
+        Assert.assertEquals(driver.getCurrentUrl(), footerModel.getCompany());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickTeamLink();
+        footerpage.clickTeamLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getTeam());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickCareersLink();
+        footerpage.clickCareersLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getCareers());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickBlogLink();
+        footerpage.clickBlogLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getBlog());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickPressReleasesLink();
+        footerpage.clickPressReleases();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getPressReleases());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickContactUsLink();
+        footerpage.clickContacUsLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getContactUs());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickForFamiliesLink();
+        footerpage.clickForFamiliesLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getForFamilies());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickForSchoolsLink();
+        footerpage.clickForSchoolsLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getForSchools());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickForBusinessLink();
+        footerpage.clickForBusinessLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getForBusiness());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickResellersLink();
+        footerpage.clickResellersLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getResellers());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickPartnersLink();
+        footerpage.clickPartners();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getPartners());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickAffiliatesLink();
+        footerpage.clickAffiliatesLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getAffiliates());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickAffiliatesLink();
-        Assert.assertEquals(driver.getCurrentUrl(), footerModel.getAffiliates());
-
-        driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickHelpLink();
+        footerpage.clickHelpLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getHelp());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.ClickSystemRequirementsLink();
+        footerpage.clickSystemRequirementsLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getSystemRequirements());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.ClickSiteMapLink();
+        footerpage.clickResourcesForParentsLink();
+        Assert.assertEquals(driver.getCurrentUrl(), footerModel.getResourcesForParents());
+
+        driver.get("http://pre.qustodio.com/en/");
+        footerpage.clickSitemapLink();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getSitemap());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickFacebookButton();
+        footerpage.clickFacebookButton();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getFacebook());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickLinkedinButton();
+        footerpage.clickLinkedinButton();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getLinkedin());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickTwitterButton();
+        footerpage.clickTwitterButton();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getTwitter());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickTermsOfServiceLink();
+        footerpage.clickTermsOfService();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getTermsOfService());
 
         driver.get("http://pre.qustodio.com/en/");
-        footerPage.clickPrivacyPolicy();
+        footerpage.clickPrivacyPolicy();
         Assert.assertEquals(driver.getCurrentUrl(), footerModel.getPrivacyPolicy());
+
+        driver.get("http://pre.qustodio.com/en/");
+        String CopyRighttext=footerpage.getCopyRightText();
+        Assert.assertEquals(CopyRighttext, footerModel.getCopyRightText());
 
 
     }
