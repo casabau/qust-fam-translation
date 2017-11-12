@@ -39,45 +39,69 @@ public class TopBarTest extends BaseTestPublicSite {
         Thread.sleep(1000);
 
 
-        driver.get("http://pre.qustodio.com/en/");
+        //driver.get("http://pre.qustodio.com/en/");
         Assert.assertTrue(topBarPage.isTopBarVisible());
         String EnTopBarTranslation= topBarPage.getEnTranslationText();
-        Assert.assertEquals(EnTopBarTranslation, topBarTranslationModel.getEnTranslate() );
+        try {
+            Assert.assertEquals( topBarTranslationModel.getEnTranslate(),EnTopBarTranslation);
+        }catch(AssertionError e){
+            System.out.println("Expected: " +topBarTranslationModel.getEnTranslate()+"\nActual: "+EnTopBarTranslation);
+        }
         topBarPage.clickTopBar();
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/en/family/premium/" );
 
         driver.get("http://pre.qustodio.com/es/");
         Assert.assertTrue(topBarPage.isTopBarVisible());
         String EsTopBarTranslation= topBarPage.getEsTranslationText();
-        Assert.assertEquals(EsTopBarTranslation, topBarTranslationModel.getEsTranslate() );
+        try {
+            Assert.assertEquals(topBarTranslationModel.getEsTranslate(),EsTopBarTranslation);
+        }catch(AssertionError e){
+            System.out.println("Expected: " +topBarTranslationModel.getEsTranslate()+"\nActual: "+EsTopBarTranslation);
+        }
         topBarPage.clickTopBar();
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/es/family/premium/" );
 
         driver.get("http://pre.qustodio.com/fr/");
         Assert.assertTrue(topBarPage.isTopBarVisible());
         String FrTopBarTranslation= topBarPage.getFrTranslationText();
-        Assert.assertEquals(FrTopBarTranslation, topBarTranslationModel.getFrTranslate() );
+        try {
+            Assert.assertEquals(topBarTranslationModel.getFrTranslate(),FrTopBarTranslation);
+        }catch (AssertionError e){
+            System.out.println("Expected: " +topBarTranslationModel.getFrTranslate()+"\nActual: "+FrTopBarTranslation);
+        }
         topBarPage.clickTopBar();
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/fr/family/premium/" );
 
         driver.get("http://pre.qustodio.com/it/");
         Assert.assertTrue(topBarPage.isTopBarVisible());
         String ItTopBarTranslation= topBarPage.getItTranslationText();
-        Assert.assertEquals(ItTopBarTranslation, topBarTranslationModel.getItTranslate() );
+        try {
+            Assert.assertEquals(topBarTranslationModel.getItTranslate(),ItTopBarTranslation);
+        }catch(AssertionError e){
+            System.out.println("Expected: " +topBarTranslationModel.getItTranslate()+"\nActual: "+ItTopBarTranslation);
+        }
         topBarPage.clickTopBar();
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/it/family/premium/" );
 
         driver.get("http://pre.qustodio.com/pt/");
         Assert.assertTrue(topBarPage.isTopBarVisible());
         String PtTopBarTranslation= topBarPage.getPtTranslationText();
-        Assert.assertEquals(PtTopBarTranslation, topBarTranslationModel.getPtTranslate() );
+        try {
+            Assert.assertEquals(topBarTranslationModel.getPtTranslate(),PtTopBarTranslation);
+        }catch (AssertionError e){
+            System.out.println("Expected: " +topBarTranslationModel.getPtTranslate()+"\nActual: "+PtTopBarTranslation);
+        }
         topBarPage.clickTopBar();
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/pt/family/premium/" );
 
         driver.get("http://pre.qustodio.com/de/");
         Assert.assertTrue(topBarPage.isTopBarVisible());
         String DeTopBarTranslation= topBarPage.getDeTranslationText();
-        Assert.assertEquals(DeTopBarTranslation, topBarTranslationModel.getDeTranslate() );
+        try {
+            Assert.assertEquals(topBarTranslationModel.getDeTranslate(),DeTopBarTranslation);
+        }catch (AssertionError e){
+            System.out.println("Expected: " +topBarTranslationModel.getDeTranslate()+"\nActual: "+DeTopBarTranslation);
+        }
         topBarPage.clickTopBar();
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/de/family/premium/");
 
