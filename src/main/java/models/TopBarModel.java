@@ -1,6 +1,6 @@
 package models;
 
-public class TopBarTranslationsModel {
+public class TopBarModel {
     private String enTranslate;
     private String esTranslate;
     private String frTranslate;

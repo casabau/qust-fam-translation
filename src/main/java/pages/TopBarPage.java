@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class TopBarTranslationPage {
+public class TopBarPage {
     WebDriver driver;
 
-    public TopBarTranslationPage(WebDriver driverLn) {
+    public TopBarPage(WebDriver driverLn) {
         {
             this.driver = driverLn;
         }
@@ -32,6 +32,9 @@ public class TopBarTranslationPage {
     @FindBy(how = How.XPATH, using = "//*[@id=\"site-header\"]/a/div")
     private WebElement deTranslation;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"site-header\"]/a/div")
+    private WebElement TopBar;
+
     public String getEnTranslationText(){
         return this.enTranslation.getText();
     }
@@ -54,5 +57,13 @@ public class TopBarTranslationPage {
 
     public String getDeTranslationText(){
         return this.deTranslation.getText();
+    }
+
+    public void clickTopBar(){
+        this.TopBar.click();
+    }
+
+    public boolean isTopBarVisible(){
+        return TopBar.isDisplayed();
     }
 }
