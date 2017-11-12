@@ -177,6 +177,14 @@ public class TopBarTest extends BaseTestPublicSite {
             System.out.println("Top bar is not present on the: " +driver.getCurrentUrl() +" page");
         }
 
+        driver.get("https://pre.qustodio.com/en/family/premium/");
+        try {
+
+            Assert.assertFalse(topBarPage.isTopBarVisible());
+        }catch(org.openqa.selenium.NoSuchElementException e){
+            System.out.println("Top bar is not present on the: " +driver.getCurrentUrl() +" page");
+        }
+
     }
 
 }
