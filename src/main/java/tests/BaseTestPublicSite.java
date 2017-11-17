@@ -2,6 +2,7 @@ package tests;
 
 import enums.Browsers;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -22,6 +23,8 @@ public class BaseTestPublicSite {
         driver.get("https://pre.qustodio.com/");
 
         Thread.sleep(1000);
+
+
     }
 
 

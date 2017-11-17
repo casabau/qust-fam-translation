@@ -7,6 +7,6 @@ public enum Browsers {
     CHROME,
     FIREFOX,
     IE,
-    Opera,
-    Edge
+    OPERA,
+    EDGE
 }
