@@ -127,55 +127,24 @@ public class DashBoardTopBarPage {
         this.clickSelect.click();
     }
 
-    public void ChangeLanguage(int index) throws InterruptedException{
+    public void ChangeLanguage(String value) throws InterruptedException{
         Thread.sleep(5000);
         profileButton.click();
         settingsButton.click();
         yourAccountButton.click();
         Thread.sleep(5000);
 
-        //driver.switchTo().frame(driver.findElement(By.xpath("/html/body/div[2]/iframe")));
-        //clickSelect.click();
-        //driver.findElement(By.className("chzn-drop")).click();
-        //JavascriptExecutor js = (JavascriptExecutor) driver;
-        //js.executeScript("document.getElementByName('lang').sty‌​le.display='block';");
-
-        //WebDriverWait wait = new WebDriverWait(driver, 10);
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("lang")));
-        //driver.findElement(By.name("lang")).click();
-        //Select dropdown = new Select(driver.findElement(By.name("lang")));
-        //dropdown.deselectAll();
-        //dropdown.selectByIndex(index);
-
-
-        /*JavascriptExecutor executor= (JavascriptExecutor)driver;
-        executor.executeScript("document.getElementsByTagName('select').style.display='block';");
-        Select select = new Select(driver.findElement(By.tagName("select")));
-        select.selectByVisibleText("Spanish");
-        */
-        /*Thread.sleep(6000);
-        WebElement hiddenWebElement =driver.findElement(By.name("lang"));
-        ((JavascriptExecutor)driver).executeScript("document.getElementsByName('lang')[0].click");
-
-        hiddenWebElement.click();*/
-        //driver.findElement(By.cssSelector("[a.chzn-single]")).click();
-        //driver.findElement(By.cssSelector("select#selL3T.chzn-done")).click();
-
         driver.findElement(By.xpath("//*[@id=\"accountInfo-form\"]/div[2]/dl/dd[4]")).click();
         JavascriptExecutor executor= (JavascriptExecutor)driver;
+        Thread.sleep(2000);
         executor.executeScript("document.getElementsByName('lang')[0].style.display='block';");
         Select select = new Select(driver.findElement(By.name("lang")));
-        select.selectByValue("es");
-        Thread.sleep(6000);
-        //driver.findElement(By.xpath("//*[@id=\"selVTJ\"]")).click();
-      //Select select = new Select(driver.findElement(By.name("lang")));
-      //driver.findElement(By.name("lang")).click();
-      //select.selectByVisibleText("Italiano");
+        select.selectByValue(value);
 
 
-        Thread.sleep(5000);
-        //Select select = new Select(driver.findElement(By.name("lang")));
         saveButton.click();
+        Thread.sleep(4000);
+        driver.get("https://fp-pre.qustodio.com");
 
     }
 

@@ -39,7 +39,23 @@ public class DashBoardTopBarTest extends BaseTestPublicSite {
 
         dashboardtopBarPage.LoginFlow();
         Thread.sleep(5000);
-        dashboardtopBarPage.ChangeLanguage(2);
+        dashboardtopBarPage.ChangeLanguage("es");
+        Thread.sleep(4000);
+
+        dashboardtopBarPage.ChangeLanguage("fr");
+        Thread.sleep(4000);
+
+        dashboardtopBarPage.ChangeLanguage("pt_BR");
+        Thread.sleep(4000);
+
+        dashboardtopBarPage.ChangeLanguage("it");
+        Thread.sleep(4000);
+
+        dashboardtopBarPage.ChangeLanguage("de");
+        Thread.sleep(4000);
+
+        dashboardtopBarPage.ChangeLanguage("en");
+        Thread.sleep(4000);
         /*dashboardtopBarPage.closeBanner();
 
         try {
