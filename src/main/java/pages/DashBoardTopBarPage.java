@@ -2,6 +2,7 @@ package pages;
 
 import models.LoginModel;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,7 +38,7 @@ public class DashBoardTopBarPage {
     @FindBy(how = How.XPATH, using = "/html/body/div[1]/div")
     private WebElement deTranslation;
 
-    @FindBy(how = How.XPATH, using = "/html/body/div[1]/div")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"site-header\"]/a")
     private WebElement TopBar;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"login_form\"]/ul/li[1]/input")
@@ -79,7 +80,7 @@ public class DashBoardTopBarPage {
         driver.get("http://fp-pre.qustodio.com");
         emailField.click();
         emailField.clear();
-        emailField.sendKeys("adytestare+pre1711@gmail.com");
+        emailField.sendKeys("adytestare+pre2011@gmail.com");
         passwordField.click();
         passwordField.clear();
         passwordField.sendKeys("test12345");
@@ -119,7 +120,7 @@ public class DashBoardTopBarPage {
     }
 
     public void closeBanner(){
-        this.closeBaner.click();
+        //this.closeBaner.click();
     }
 
     public void clickSelect(){
@@ -133,11 +134,47 @@ public class DashBoardTopBarPage {
         yourAccountButton.click();
         Thread.sleep(5000);
 
-        driver.switchTo().frame(driver.findElement(By.xpath("/html/body/div[2]/iframe")));
+        //driver.switchTo().frame(driver.findElement(By.xpath("/html/body/div[2]/iframe")));
         //clickSelect.click();
-        Select dropdown = new Select(driver.findElement(By.xpath("//*[@id=\"selXIT\"]")));
-        dropdown.deselectAll();
-        dropdown.selectByIndex(index);
+        //driver.findElement(By.className("chzn-drop")).click();
+        //JavascriptExecutor js = (JavascriptExecutor) driver;
+        //js.executeScript("document.getElementByName('lang').sty‌​le.display='block';");
+
+        //WebDriverWait wait = new WebDriverWait(driver, 10);
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("lang")));
+        //driver.findElement(By.name("lang")).click();
+        //Select dropdown = new Select(driver.findElement(By.name("lang")));
+        //dropdown.deselectAll();
+        //dropdown.selectByIndex(index);
+
+
+        /*JavascriptExecutor executor= (JavascriptExecutor)driver;
+        executor.executeScript("document.getElementsByTagName('select').style.display='block';");
+        Select select = new Select(driver.findElement(By.tagName("select")));
+        select.selectByVisibleText("Spanish");
+        */
+        /*Thread.sleep(6000);
+        WebElement hiddenWebElement =driver.findElement(By.name("lang"));
+        ((JavascriptExecutor)driver).executeScript("document.getElementsByName('lang')[0].click");
+
+        hiddenWebElement.click();*/
+        //driver.findElement(By.cssSelector("[a.chzn-single]")).click();
+        //driver.findElement(By.cssSelector("select#selL3T.chzn-done")).click();
+
+        driver.findElement(By.xpath("//*[@id=\"accountInfo-form\"]/div[2]/dl/dd[4]")).click();
+        JavascriptExecutor executor= (JavascriptExecutor)driver;
+        executor.executeScript("document.getElementsByName('lang')[0].style.display='block';");
+        Select select = new Select(driver.findElement(By.name("lang")));
+        select.selectByValue("es");
+        Thread.sleep(6000);
+        //driver.findElement(By.xpath("//*[@id=\"selVTJ\"]")).click();
+      //Select select = new Select(driver.findElement(By.name("lang")));
+      //driver.findElement(By.name("lang")).click();
+      //select.selectByVisibleText("Italiano");
+
+
+        Thread.sleep(5000);
+        //Select select = new Select(driver.findElement(By.name("lang")));
         saveButton.click();
 
     }

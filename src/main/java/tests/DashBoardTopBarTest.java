@@ -39,7 +39,8 @@ public class DashBoardTopBarTest extends BaseTestPublicSite {
 
         dashboardtopBarPage.LoginFlow();
         Thread.sleep(5000);
-        dashboardtopBarPage.closeBanner();
+        dashboardtopBarPage.ChangeLanguage(2);
+        /*dashboardtopBarPage.closeBanner();
 
         try {
             //Assert.assertTrue(dashboardtopBarPage.isTopBarVisible());
@@ -103,7 +104,7 @@ public class DashBoardTopBarTest extends BaseTestPublicSite {
             System.out.println("Expected: " +topBarTranslationModel.getDeTranslate()+"\nActual: "+DeTopBarTranslation);
         }
 
-
+        */
     }
 
 }
