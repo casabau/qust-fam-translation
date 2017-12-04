@@ -25,7 +25,7 @@ public class TopBarTest extends BaseTestPublicSite {
         ObjectMapper objectMapper = new ObjectMapper();
         Collection<Object[]> dp = new ArrayList<>();
 
-        File[] files = getListOfFiles("topBarTranslate");
+        File[] files = getListOfFiles("publicWebsiteTopBar");
         for (File f : files) {
             TopBarModel m = objectMapper.readValue(f, TopBarModel.class);
             dp.add(new Object[]{m});
@@ -48,6 +48,7 @@ public class TopBarTest extends BaseTestPublicSite {
             System.out.println("Expected: " +topBarTranslationModel.getEnTranslate()+"\nActual: "+EnTopBarTranslation);
         }
         topBarPage.clickTopBar();
+
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/en/family/premium/" );
 
         driver.get("http://pre.qustodio.com/es/");

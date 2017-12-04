@@ -11,10 +11,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class dashboardTopBar02Page {
+public class DashboardTopBar02Page {
     WebDriver driver;
 
-    public dashboardTopBar02Page(WebDriver driverLn) {
+    public DashboardTopBar02Page(WebDriver driverLn) {
         {
             this.driver = driverLn;
         }
@@ -82,7 +82,7 @@ public class dashboardTopBar02Page {
         wait.until(ExpectedConditions.elementToBeClickable(emailField));
         emailField.click();
         emailField.clear();
-        emailField.sendKeys("adytestare+pre2011@gmail.com");
+        emailField.sendKeys("adytestare+pre1011c@gmail.com");
         wait.until(ExpectedConditions.elementToBeClickable(passwordField));
         passwordField.click();
         passwordField.clear();
@@ -123,7 +123,7 @@ public class dashboardTopBar02Page {
     }
 
     public void closeBanner(){
-        //this.closeBaner.click();
+        this.closeBaner.click();
     }
 
     public void clickSelect(){
@@ -132,11 +132,14 @@ public class dashboardTopBar02Page {
 
     public void ChangeLanguage(String value) throws InterruptedException{
         WebDriverWait wait=new WebDriverWait(driver,10);
+        driver.get("https://fp-pre.qustodio.com/user-activity/summary");
+        //Thread.sleep(3000);
         wait.until(ExpectedConditions.elementToBeClickable(profileButton));
+
         profileButton.click();
         wait.until(ExpectedConditions.elementToBeClickable(settingsButton));
         settingsButton.click();
-        wait.until(ExpectedConditions.elementToBeClickable(yourAccountButton));
+        wait.until(ExpectedConditions.visibilityOf(yourAccountButton));
         yourAccountButton.click();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"account-settings\"]")));

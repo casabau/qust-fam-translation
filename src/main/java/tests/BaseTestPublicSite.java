@@ -3,6 +3,7 @@ package tests;
 import enums.Browsers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -20,7 +21,14 @@ public class BaseTestPublicSite {
         driver = WebBrowsers.getDriver(Browsers.CHROME);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("https://fp-pre.qustodio.com/");
+        driver.get("https://pre.qustodio.com/");
+        //driver=WebBrowsers.getDriver(Browsers.IE);
+        //driver.get("https://fp-pre.qustodio.com");
+        //driver=WebBrowsers.getDriver(Browsers.EDGE);
+        //driver.get("https://pre.qustodio.com");
+        //driver=WebBrowsers.getDriver(Browsers.FIREFOX);
+        //driver.get("htpps://fp-pre.qustodio.com");
+
 
         Thread.sleep(1000);
 
