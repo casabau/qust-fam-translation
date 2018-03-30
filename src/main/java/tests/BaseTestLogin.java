@@ -1,7 +1,7 @@
 package tests;
 
 import enums.Browsers;
-import org.junit.After;
+//import org.junit.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -22,7 +22,7 @@ public class BaseTestLogin {
         driver = WebBrowsers.getDriver(Browsers.CHROME);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("https://fp-pre.qustodio.com/");
+        driver.get("https://pre.qustodio.com/pt/get-started/");
 
 
         Thread.sleep(1000);
