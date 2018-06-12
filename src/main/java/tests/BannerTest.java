@@ -22,7 +22,7 @@ public class BannerTest extends BaseTestPublicSite {
         ObjectMapper objectMapper = new ObjectMapper();
         Collection<Object[]> dp = new ArrayList<>();
 
-        File[] files = getListOfFiles("bannerTranslate");
+        File[] files = getListOfFiles("bannerXmas");
         for (File f : files) {
             BannerModel m = objectMapper.readValue(f, BannerModel.class);
             dp.add(new Object[]{m});
