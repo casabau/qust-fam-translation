@@ -25,7 +25,7 @@ public class TopBarTest extends BaseTestPublicSite {
         ObjectMapper objectMapper = new ObjectMapper();
         Collection<Object[]> dp = new ArrayList<>();
 
-        File[] files = getListOfFiles("publicWebsiteTopBar");
+        File[] files = getListOfFiles("topBarTranslate");
         for (File f : files) {
             TopBarModel m = objectMapper.readValue(f, TopBarModel.class);
             dp.add(new Object[]{m});
