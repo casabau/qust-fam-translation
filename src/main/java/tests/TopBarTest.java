@@ -185,6 +185,19 @@ public class TopBarTest extends BaseTestPublicSite {
             System.out.println("Top bar is not present on the: " +driver.getCurrentUrl() +" page");
         }
 
+        driver.get("https://pre.qustodio.com/parental-control/");
+        Assert.assertTrue(topBarPage.isTopBarVisible(),"Top bar e present pe pagina : "+driver.getCurrentUrl());
+
+        driver.get("https://pre.qustodio.com/parental-control/b");
+        Assert.assertTrue(topBarPage.isTopBarVisible(),"Top bar e present pe pagina : "+driver.getCurrentUrl());
+
+       // driver.get("https://pre.qustodio.com/premium-special-promo/");
+      //  Assert.assertTrue(topBarPage.isTopBarVisible(),"Top bar e present pe pagina : "+driver.getCurrentUrl());
+
+       // driver.get("https://pre.qustodio.com/en/free-sign-up/");
+      //  Assert.assertTrue(topBarPage.isTopBarVisible(),"Top bar e present pe pagina : "+driver.getCurrentUrl());
+
+
     }
 
 }
