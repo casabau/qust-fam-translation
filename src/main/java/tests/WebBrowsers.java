@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
  * Created by casab on 11/2/2017.
@@ -21,7 +23,16 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
                     break;
                 case FIREFOX:
                     System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
-                    driver = new FirefoxDriver();
+                    FirefoxOptions FFoptions = new FirefoxOptions();
+                    FFoptions.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe"); //Location where Firefox is installed
+
+                    DesiredCapabilities FFcapabilities = DesiredCapabilities.firefox();
+                    FFcapabilities.setCapability("moz:firefoxOptions", FFoptions);
+                    //set more capabilities as per your requirements
+
+
+                    driver = new FirefoxDriver(FFcapabilities);
+
                     break;
                 case IE:
                     System.setProperty("webdriver.ie.driver", "src/test/resources/drivers/IEDriverServer.exe");

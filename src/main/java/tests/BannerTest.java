@@ -3,7 +3,11 @@ package tests;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import models.BannerModel;
 import models.TopBarModel;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -36,7 +40,7 @@ public class BannerTest extends BaseTestPublicSite {
         Thread.sleep(1000);
 
 
-        driver.get("https://pre.qustodio.com/en/family/premium/");
+        driver.get("https://pre.qustodio.com/en/family/premium-20/");
         Assert.assertTrue(bannerPage.isBannerVisible());
         String EnTranslate1 = bannerPage.getEnTranslate1();
         try {
@@ -52,7 +56,7 @@ public class BannerTest extends BaseTestPublicSite {
             System.out.println("Expected: " + bannerModel.getEnTranslate2() + "\nActual: " + EnTranslate2);
         }
 
-        driver.get("https://pre.qustodio.com/es/family/premium/");
+        driver.get("https://pre.qustodio.com/es/family/premium-20/");
         Assert.assertTrue(bannerPage.isBannerVisible());
         String EsTranslate1 = bannerPage.getEsTranslate1();
         try {
@@ -68,7 +72,7 @@ public class BannerTest extends BaseTestPublicSite {
             System.out.println("Expected: " + bannerModel.getEsTranslate2() + "\nActual: " + EsTranslate2);
         }
 
-        driver.get("https://pre.qustodio.com/fr/family/premium/");
+        driver.get("https://pre.qustodio.com/fr/family/premium-20/");
         Assert.assertTrue(bannerPage.isBannerVisible());
         String FrTranslate1 = bannerPage.getFrTranslate1();
         try {
@@ -84,7 +88,7 @@ public class BannerTest extends BaseTestPublicSite {
             System.out.println("Expected: " + bannerModel.getFrTranslate2() + "\nActual: " + FrTranslate2);
         }
 
-        driver.get("https://pre.qustodio.com/it/family/premium/");
+        driver.get("https://pre.qustodio.com/it/family/premium-20/");
         Assert.assertTrue(bannerPage.isBannerVisible());
         String ItTranslate1 = bannerPage.getItTranslate1();
         try {
@@ -100,7 +104,7 @@ public class BannerTest extends BaseTestPublicSite {
             System.out.println("Expected: " + bannerModel.getItTranslate2() + "\nActual: " + ItTranslate2);
         }
 
-        driver.get("https://pre.qustodio.com/pt/family/premium/");
+        driver.get("https://pre.qustodio.com/pt/family/premium-20/");
         Assert.assertTrue(bannerPage.isBannerVisible());
         String PtTranslate1 = bannerPage.getPtTranslate1();
         try {
@@ -116,7 +120,7 @@ public class BannerTest extends BaseTestPublicSite {
             System.out.println("Expected: " + bannerModel.getPtTranslate2() + "\nActual: " + PtTranslate2);
         }
 
-        driver.get("https://pre.qustodio.com/de/family/premium/");
+        driver.get("https://pre.qustodio.com/de/family/premium-20/");
         Assert.assertTrue(bannerPage.isBannerVisible());
         String DeTranslate1 = bannerPage.getDeTranslate1();
         try {
@@ -131,6 +135,7 @@ public class BannerTest extends BaseTestPublicSite {
         } catch (AssertionError e) {
             System.out.println("Expected:" + bannerModel.getDeTranslate2() + "\nActual:" + DeTranslate2);
         }
+
 
 
     }

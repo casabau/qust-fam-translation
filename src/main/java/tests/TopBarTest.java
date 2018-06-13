@@ -3,6 +3,8 @@ package tests;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import models.TopBarModel;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -49,6 +51,9 @@ public class TopBarTest extends BaseTestPublicSite {
         }
         topBarPage.clickTopBar();
 
+        WebDriverWait wait=new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.urlToBe("https://pre.qustodio.com/en/family/premium/"));
+
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/en/family/premium/" );
 
         driver.get("http://pre.qustodio.com/es/");
@@ -60,6 +65,7 @@ public class TopBarTest extends BaseTestPublicSite {
             System.out.println("Expected: " +topBarTranslationModel.getEsTranslate()+"\nActual: "+EsTopBarTranslation);
         }
         topBarPage.clickTopBar();
+        wait.until(ExpectedConditions.urlToBe("https://pre.qustodio.com/es/family/premium/"));
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/es/family/premium/" );
 
         driver.get("http://pre.qustodio.com/fr/");
@@ -71,6 +77,7 @@ public class TopBarTest extends BaseTestPublicSite {
             System.out.println("Expected: " +topBarTranslationModel.getFrTranslate()+"\nActual: "+FrTopBarTranslation);
         }
         topBarPage.clickTopBar();
+        wait.until(ExpectedConditions.urlToBe("https://pre.qustodio.com/fr/family/premium/"));
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/fr/family/premium/" );
 
         driver.get("http://pre.qustodio.com/it/");
@@ -82,6 +89,7 @@ public class TopBarTest extends BaseTestPublicSite {
             System.out.println("Expected: " +topBarTranslationModel.getItTranslate()+"\nActual: "+ItTopBarTranslation);
         }
         topBarPage.clickTopBar();
+        wait.until(ExpectedConditions.urlToBe("https://pre.qustodio.com/it/family/premium/"));
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/it/family/premium/" );
 
         driver.get("http://pre.qustodio.com/pt/");
@@ -93,6 +101,7 @@ public class TopBarTest extends BaseTestPublicSite {
             System.out.println("Expected: " +topBarTranslationModel.getPtTranslate()+"\nActual: "+PtTopBarTranslation);
         }
         topBarPage.clickTopBar();
+        wait.until(ExpectedConditions.urlToBe("https://pre.qustodio.com/pt/family/premium/"));
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/pt/family/premium/" );
 
         driver.get("http://pre.qustodio.com/de/");
@@ -104,6 +113,7 @@ public class TopBarTest extends BaseTestPublicSite {
             System.out.println("Expected: " +topBarTranslationModel.getDeTranslate()+"\nActual: "+DeTopBarTranslation);
         }
         topBarPage.clickTopBar();
+        wait.until(ExpectedConditions.urlToBe("https://pre.qustodio.com/de/family/premium/"));
         Assert.assertEquals(driver.getCurrentUrl(), "https://pre.qustodio.com/de/family/premium/");
 
         driver.get("https://pre.qustodio.com/en/schools/");

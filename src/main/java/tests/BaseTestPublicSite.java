@@ -18,10 +18,10 @@ public class BaseTestPublicSite {
 
     @BeforeMethod
     public void setUp() throws InterruptedException {
-        driver = WebBrowsers.getDriver(Browsers.CHROME);
+        driver = WebBrowsers.getDriver(Browsers.EDGE);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("https://fp-pre.qustodio.com/");
+        driver.get("https://pre.qustodio.com/");
         //driver=WebBrowsers.getDriver(Browsers.IE);
         //driver.get("https://fp-pre.qustodio.com");
         //driver=WebBrowsers.getDriver(Browsers.EDGE);
