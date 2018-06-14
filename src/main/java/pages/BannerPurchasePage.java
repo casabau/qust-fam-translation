@@ -101,10 +101,10 @@ public class BannerPurchasePage {
 
         driver.switchTo().frame("iFrameResizer0");
 
-        //wait.until(ExpectedConditions.visibilityOf(logInLink));
+        wait.until(ExpectedConditions.elementToBeClickable(logInLink));
         logInLink.click();
 
-        wait.until(ExpectedConditions.visibilityOf(emailInput));
+        wait.until(ExpectedConditions.visibilityOf(signInButton));
         emailInput.sendKeys("adytestare+613a@gmail.com");
         wait.until(ExpectedConditions.visibilityOf(passwordInput));
         passwordInput.sendKeys("test12345");
@@ -142,16 +142,19 @@ public class BannerPurchasePage {
         lastName.sendKeys("test");
 
         Select dropdown=new Select(country);
+        wait.until(ExpectedConditions.elementToBeClickable(country));
         country.click();
         dropdown.selectByVisibleText("Algeria");
 
         cardNumber.sendKeys("4111 1111 1111 1111");
 
         Select dropdown2=new Select(expiry);
+        wait.until(ExpectedConditions.elementToBeClickable(expiry));
         expiry.click();
         dropdown2.selectByVisibleText("12");
 
         Select dropdown3=new Select(year);
+        wait.until(ExpectedConditions.elementToBeClickable(year));
         year.click();
         dropdown3.selectByVisibleText("2019");
 
@@ -178,7 +181,7 @@ public class BannerPurchasePage {
         //wait.until(ExpectedConditions.visibilityOf(logInLink));
         logInLink.click();
 
-        wait.until(ExpectedConditions.visibilityOf(emailInput));
+        wait.until(ExpectedConditions.visibilityOf(signInButton));
         emailInput.sendKeys("adytestare+613a@gmail.com");
         wait.until(ExpectedConditions.visibilityOf(passwordInput));
         passwordInput.sendKeys("test12345");
@@ -216,16 +219,19 @@ public class BannerPurchasePage {
         lastName.sendKeys("test");
 
         Select dropdown=new Select(country);
+        wait.until(ExpectedConditions.elementToBeClickable(country));
         country.click();
         dropdown.selectByVisibleText("Algeria");
 
         cardNumber.sendKeys("4111 1111 1111 1111");
 
         Select dropdown2=new Select(expiry);
+        wait.until(ExpectedConditions.elementToBeClickable(expiry));
         expiry.click();
         dropdown2.selectByVisibleText("12");
 
         Select dropdown3=new Select(year);
+        wait.until(ExpectedConditions.elementToBeClickable(year));
         year.click();
         dropdown3.selectByVisibleText("2019");
 

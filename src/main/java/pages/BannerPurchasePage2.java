@@ -139,16 +139,19 @@ public class BannerPurchasePage2 {
         lastName.sendKeys("test");
 
         Select dropdown=new Select(country);
+        wait.until(ExpectedConditions.elementToBeClickable(country));
         country.click();
         dropdown.selectByVisibleText("Algeria");
 
         cardNumber.sendKeys("4111 1111 1111 1111");
 
         Select dropdown2=new Select(expiry);
+        wait.until(ExpectedConditions.elementToBeClickable(expiry));
         expiry.click();
         dropdown2.selectByVisibleText("12");
 
         Select dropdown3=new Select(year);
+        wait.until(ExpectedConditions.elementToBeClickable(year));
         year.click();
         dropdown3.selectByVisibleText("2019");
 
@@ -212,16 +215,19 @@ public class BannerPurchasePage2 {
         lastName.sendKeys("test");
 
         Select dropdown=new Select(country);
+        wait.until(ExpectedConditions.elementToBeClickable(country));
         country.click();
         dropdown.selectByVisibleText("Algeria");
 
         cardNumber.sendKeys("4111 1111 1111 1111");
 
         Select dropdown2=new Select(expiry);
+        wait.until(ExpectedConditions.elementToBeClickable(expiry));
         expiry.click();
         dropdown2.selectByVisibleText("12");
 
         Select dropdown3=new Select(year);
+        wait.until(ExpectedConditions.elementToBeClickable(year));
         year.click();
         dropdown3.selectByVisibleText("2019");
 

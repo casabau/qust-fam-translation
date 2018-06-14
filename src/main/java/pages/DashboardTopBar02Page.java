@@ -74,6 +74,9 @@ public class DashboardTopBar02Page {
     @FindBy (how = How.XPATH, using = "//*[@id=\"selXIT_chzn\"]/a")
     private WebElement clickSelect;
 
+    @FindBy (how = How.XPATH, using = " //*[@id=\"cboxContent\"]")
+    private WebElement flyover;
+
 
 
     public void LoginFlow() throws InterruptedException {
@@ -82,13 +85,15 @@ public class DashboardTopBar02Page {
         wait.until(ExpectedConditions.elementToBeClickable(emailField));
         emailField.click();
         emailField.clear();
-        emailField.sendKeys("adytestare+pre1011c@gmail.com");
+        emailField.sendKeys("adytestare+freesub30@gmail.com");
         wait.until(ExpectedConditions.elementToBeClickable(passwordField));
         passwordField.click();
         passwordField.clear();
         passwordField.sendKeys("test12345");
         loginButton.click();
     }
+
+
 
     public String getEnTranslationText(){
         return this.enTranslation.getText();
