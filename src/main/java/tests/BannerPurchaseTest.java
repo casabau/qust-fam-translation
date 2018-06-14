@@ -33,6 +33,21 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
     }
 
     @Test(dataProvider = "BannerJson",priority = 1)
+    public void BannerPuchaseSmallPackegeTestEn(BannerModel bannerModel) throws InterruptedException {
+        BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
+        Thread.sleep(1000);
+
+        bannerPurchasePage.PurchaseSmallPackage("https://pre.qustodio.com/en/family/premium-20/","SuMMer");
+
+
+
+
+    }
+
+
+
+
+    @Test(dataProvider = "BannerJson",priority = 2)
     public void BannerPuchaseMediumPackegeTestEn(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -45,7 +60,7 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
     }
 
 
-    @Test(dataProvider = "BannerJson",priority = 2)
+    @Test(dataProvider = "BannerJson",priority = 3)
     public void BannerPuchaseLargePackegeTestEn(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -58,7 +73,24 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
     }
 
 
-    @Test(dataProvider = "BannerJson",priority = 3)
+    @Test(dataProvider = "BannerJson",priority = 4)
+    public void BannerPuchaseSmallPackegeTestEs(BannerModel bannerModel) throws InterruptedException {
+        BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
+        Thread.sleep(1000);
+
+        bannerPurchasePage.PurchaseSmallPackage("https://pre.qustodio.com/es/family/premium-20/","SuMMer");
+
+
+
+
+    }
+
+
+
+
+
+
+    @Test(dataProvider = "BannerJson",priority = 5)
     public void BannerPuchaseMediumPackegeTestEs(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -71,7 +103,7 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
     }
 
 
-    @Test(dataProvider = "BannerJson",priority = 4)
+    @Test(dataProvider = "BannerJson",priority = 6)
     public void BannerPuchaseLargePackegeTestEs(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -83,7 +115,20 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
 
     }
 
-    @Test(dataProvider = "BannerJson",priority = 5)
+    @Test(dataProvider = "BannerJson",priority = 7)
+    public void BannerPuchaseSmallPackegeTestFr(BannerModel bannerModel) throws InterruptedException {
+        BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
+        Thread.sleep(1000);
+
+        bannerPurchasePage.PurchaseSmallPackage("https://pre.qustodio.com/fr/family/premium-20/","SuMMer");
+
+
+
+
+    }
+
+
+    @Test(dataProvider = "BannerJson",priority = 8)
     public void BannerPuchaseMediumPackegeTestFr(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -96,7 +141,7 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
     }
 
 
-    @Test(dataProvider = "BannerJson",priority = 6)
+    @Test(dataProvider = "BannerJson",priority = 9)
     public void BannerPuchaseLargePackegeTestFr(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -108,7 +153,21 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
 
     }
 
-    @Test(dataProvider = "BannerJson",priority = 7)
+    @Test(dataProvider = "BannerJson",priority = 10)
+    public void BannerPuchaseSmallPackegeTestIt(BannerModel bannerModel) throws InterruptedException {
+        BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
+        Thread.sleep(1000);
+
+        bannerPurchasePage.PurchaseSmallPackage("https://pre.qustodio.com/it/family/premium-20/","SuMMer");
+
+
+
+
+    }
+
+
+
+    @Test(dataProvider = "BannerJson",priority = 11)
     public void BannerPuchaseMediumPackegeTestIt(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -121,7 +180,7 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
     }
 
 
-    @Test(dataProvider = "BannerJson",priority = 8)
+    @Test(dataProvider = "BannerJson",priority = 12)
     public void BannerPuchaseLargePackegeTestIt(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -133,7 +192,20 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
 
     }
 
-    @Test(dataProvider = "BannerJson",priority = 9)
+    @Test(dataProvider = "BannerJson",priority = 13)
+    public void BannerPuchaseSmallPackegeTestPt(BannerModel bannerModel) throws InterruptedException {
+        BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
+        Thread.sleep(1000);
+
+        bannerPurchasePage.PurchaseSmallPackage("https://pre.qustodio.com/pt/family/premium-20/","SuMMer");
+
+
+
+
+    }
+
+
+    @Test(dataProvider = "BannerJson",priority = 14)
     public void BannerPuchaseMediumPackegeTestPt(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -146,7 +218,7 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
     }
 
 
-    @Test(dataProvider = "BannerJson",priority = 10)
+    @Test(dataProvider = "BannerJson",priority = 15)
     public void BannerPuchaseLargePackegeTestPt(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -157,8 +229,19 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
 
     }
 
+    @Test(dataProvider = "BannerJson",priority = 16)
+    public void BannerPuchaseSmallPackegeTestDe(BannerModel bannerModel) throws InterruptedException {
+        BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
+        Thread.sleep(1000);
 
-    @Test(dataProvider = "BannerJson",priority = 11)
+        bannerPurchasePage.PurchaseSmallPackage("https://pre.qustodio.com/de/family/premium-20/","SuMMer");
+
+
+
+
+    }
+
+    @Test(dataProvider = "BannerJson",priority = 17)
     public void BannerPuchaseMediumPackegeTestDe(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);
@@ -171,7 +254,7 @@ public class BannerPurchaseTest extends BaseTestPublicSite {
     }
 
 
-    @Test(dataProvider = "BannerJson",priority = 12)
+    @Test(dataProvider = "BannerJson",priority =18)
     public void BannerPuchaseLargePackegeTestDe(BannerModel bannerModel) throws InterruptedException {
         BannerPurchasePage bannerPurchasePage = PageFactory.initElements(driver, BannerPurchasePage.class);
         Thread.sleep(1000);

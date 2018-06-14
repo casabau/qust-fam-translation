@@ -26,6 +26,9 @@ public class BannerPurchasePage {
     @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]")
     private WebElement banner;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[2]/div/div[1]/a")
+    private WebElement buySmallButton;
+
     @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[2]/div/div[2]/a")
     private WebElement buyMediumButton;
 
@@ -88,6 +91,84 @@ public class BannerPurchasePage {
 
     @FindBy(how = How.XPATH, using = "/html/body/div[2]/img[1]")
     private WebElement successPic;
+
+
+    public void PurchaseSmallPackage(String url,String Coupon) throws InterruptedException {
+
+        driver.get(url);
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(banner));
+        wait.until(ExpectedConditions.visibilityOf(buyMediumButton));
+
+        buySmallButton.click();
+
+        driver.switchTo().frame("iFrameResizer0");
+
+        wait.until(ExpectedConditions.elementToBeClickable(logInLink));
+        logInLink.click();
+
+        wait.until(ExpectedConditions.visibilityOf(signInButton));
+        emailInput.sendKeys("adytestare+613a@gmail.com");
+        wait.until(ExpectedConditions.visibilityOf(passwordInput));
+        passwordInput.sendKeys("test12345");
+        wait.until(ExpectedConditions.visibilityOf(signInButton));
+        signInButton.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(noThanks));
+        noThanks.click();
+        wait.until(ExpectedConditions.urlContains("https://qustodio-test.chargebee.com"));
+        driver.switchTo().defaultContent();
+        Thread.sleep(2000);
+        wait.until(ExpectedConditions.visibilityOf(currentPrice));
+        System.out.print(currentPrice.getText());
+        Thread.sleep(2000);
+        Assert.assertEquals(currentPrice.getText(),"$54.95");
+
+        wait.until(ExpectedConditions.visibilityOf(discountInput));
+        Thread.sleep(3000);
+        discountInput.sendKeys(Coupon);
+
+
+
+        applyDiscount.click();
+
+        Thread.sleep(5000);
+
+        Assert.assertEquals( driver.findElement(By.xpath("//*[@id=\"cb-order-total\"]/div[2]")).getText(),"$43.96");
+
+       /* Actions actions=new Actions(driver);
+        actions.moveToElement(buy);
+        actions.perform();*/
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", buy);
+        firstName.sendKeys("test");
+
+        lastName.sendKeys("test");
+
+        Select dropdown=new Select(country);
+        wait.until(ExpectedConditions.elementToBeClickable(country));
+        country.click();
+        dropdown.selectByVisibleText("Algeria");
+
+        cardNumber.sendKeys("4111 1111 1111 1111");
+
+        Select dropdown2=new Select(expiry);
+        wait.until(ExpectedConditions.elementToBeClickable(expiry));
+        expiry.click();
+        dropdown2.selectByVisibleText("12");
+
+        Select dropdown3=new Select(year);
+        wait.until(ExpectedConditions.elementToBeClickable(year));
+        year.click();
+        dropdown3.selectByVisibleText("2019");
+
+        cvv.sendKeys("666");
+
+        buy.click();
+
+        wait.until(ExpectedConditions.visibilityOf(successPic));
+
+    }
+
 
 
     public void PurchaseMediumPackage(String url,String Coupon) throws InterruptedException {
