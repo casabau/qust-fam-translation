@@ -33,7 +33,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/en/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/en/family/premium/","SuCCEsS10");
 
 
 
@@ -45,7 +45,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/en/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/en/family/premium/","SuCCEsS10");
 
 
 
@@ -58,7 +58,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/en/family/premium/","SuMMER10");
+        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/en/family/premium/","SuCCEsS10");
 
 
 
@@ -70,7 +70,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/es/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/es/family/premium/","SuCCEsS10");
 
 
 
@@ -82,7 +82,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/es/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/es/family/premium/","SuCCEsS10");
 
 
 
@@ -95,7 +95,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/es/family/premium/","SuMMER10");
+        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/es/family/premium/","SuCCEsS10");
 
 
 
@@ -107,7 +107,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/fr/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/fr/family/premium/","SuCCEsS10");
 
 
 
@@ -119,7 +119,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/fr/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/fr/family/premium/","SuCCEsS10");
 
 
 
@@ -132,7 +132,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/fr/family/premium/","SuMMER10");
+        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/fr/family/premium/","SuCCEsS10");
 
 
 
@@ -144,7 +144,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/it/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/it/family/premium/","SuCCEsS10");
 
 
 
@@ -157,7 +157,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/it/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/it/family/premium/","SuCCEsS10");
 
 
 
@@ -170,7 +170,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/it/family/premium/","SuMMER10");
+        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/it/family/premium/","SuCCEsS10");
 
 
 
@@ -182,7 +182,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/pt/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/pt/family/premium/","SuCCEsS10");
 
 
 
@@ -194,7 +194,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/pt/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/pt/family/premium/","SuCCEsS10");
 
 
 
@@ -207,7 +207,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/pt/family/premium/","SuMMER10");
+        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/pt/family/premium/","SuCCEsS10");
 
 
 
@@ -218,7 +218,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/de/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseSmallPackage("https://pre.qustodio.com/de/family/premium/","SuCCEsS10");
 
 
 
@@ -231,7 +231,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/de/family/premium/","SuMMer10");
+        bannerPurchasePage2.PurchaseMediumPackage("https://pre.qustodio.com/de/family/premium/","SuCCEsS10");
 
 
 
@@ -244,7 +244,7 @@ public class BannerPurchaseTest2 extends BaseTestPublicSite {
         BannerPurchasePage2 bannerPurchasePage2 = PageFactory.initElements(driver, BannerPurchasePage2.class);
         Thread.sleep(1000);
 
-        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/de/family/premium/","SuMMER10");
+        bannerPurchasePage2.PurchaseLargePackage("https://pre.qustodio.com/de/family/premium/","SuCCEsS10");
 
 
 

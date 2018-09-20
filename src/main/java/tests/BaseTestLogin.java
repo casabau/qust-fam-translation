@@ -22,7 +22,7 @@ public class BaseTestLogin {
         driver = WebBrowsers.getDriver(Browsers.CHROME);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("https://fp-pre.qustodio.com/");
+        driver.get("https://pre.qustodio.com/");
 
 
         Thread.sleep(1000);

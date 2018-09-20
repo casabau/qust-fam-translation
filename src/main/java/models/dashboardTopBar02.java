@@ -7,6 +7,8 @@ public class dashboardTopBar02 {
     private String itTranslate;
     private String ptTranslate;
     private String deTranslate;
+    private String script;
+    private String url;
 
     public String getEnTranslate() {
         return enTranslate;
@@ -56,4 +58,19 @@ public class dashboardTopBar02 {
         this.deTranslate = deTranslate;
     }
 
+    public String getScript() {
+        return script;
+    }
+
+    public void setScript(String script) {
+        this.script = script;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }

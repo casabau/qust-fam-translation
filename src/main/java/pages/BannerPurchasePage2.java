@@ -24,13 +24,13 @@ public class BannerPurchasePage2 {
     @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]")
     private WebElement banner;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[2]/div/div[1]/a")
+    @FindBy(how = How.CSS, using = "#page > div:nth-child(2) > div.s-premium.s-premium--halloween2018 > div.c-block.b-hero.b-hero--gradient.s-premium__hero.halloween2018__premium__wrapper > div > div.b-plans > div.b-plan.b-plan--s > a")
     private WebElement buySmallButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[2]/div/div[2]/a")
+    @FindBy(how = How.CSS, using = "#page > div:nth-child(2) > div.s-premium.s-premium--halloween2018 > div.c-block.b-hero.b-hero--gradient.s-premium__hero.halloween2018__premium__wrapper > div > div.b-plans > div.b-plan.b-plan--m > a")
     private WebElement buyMediumButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[2]/div/div[3]/a")
+    @FindBy(how = How.CSS, using = "#page > div:nth-child(2) > div.s-premium.s-premium--halloween2018 > div.c-block.b-hero.b-hero--gradient.s-premium__hero.halloween2018__premium__wrapper > div > div.b-plans > div.b-plan.b-plan--l > a")
     private WebElement buyLarge;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"iFrameResizer0\"]")
@@ -95,7 +95,7 @@ public class BannerPurchasePage2 {
         driver.get(url);
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(banner));
-        wait.until(ExpectedConditions.visibilityOf(buyMediumButton));
+//        wait.until(ExpectedConditions.visibilityOf(buyMediumButton));
 
         buySmallButton.click();
 

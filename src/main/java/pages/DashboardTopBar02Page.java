@@ -85,7 +85,7 @@ public class DashboardTopBar02Page {
         wait.until(ExpectedConditions.elementToBeClickable(emailField));
         emailField.click();
         emailField.clear();
-        emailField.sendKeys("adytestare+freesub30@gmail.com");
+        emailField.sendKeys("adytestare+bts-free@gmail.com");
         wait.until(ExpectedConditions.elementToBeClickable(passwordField));
         passwordField.click();
         passwordField.clear();

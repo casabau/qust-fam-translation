@@ -197,16 +197,20 @@ public class TopBarTest extends BaseTestPublicSite {
         }
 
         driver.get("https://pre.qustodio.com/parental-control/");
+        Thread.sleep(2000);
         Assert.assertTrue(topBarPage.isTopBarVisible(),"Top bar e present pe pagina : "+driver.getCurrentUrl());
 
         driver.get("https://pre.qustodio.com/parental-control/b");
+        Thread.sleep(2000);
         Assert.assertTrue(topBarPage.isTopBarVisible(),"Top bar e present pe pagina : "+driver.getCurrentUrl());
 
-       // driver.get("https://pre.qustodio.com/premium-special-promo/");
-      //  Assert.assertTrue(topBarPage.isTopBarVisible(),"Top bar e present pe pagina : "+driver.getCurrentUrl());
+        driver.get("https://pre.qustodio.com/premium-special-promo/");
+        Thread.sleep(2000);
+        Assert.assertTrue(topBarPage.isTopBarVisible(),"Top bar e present pe pagina : "+driver.getCurrentUrl());
 
-       // driver.get("https://pre.qustodio.com/en/free-sign-up/");
-      //  Assert.assertTrue(topBarPage.isTopBarVisible(),"Top bar e present pe pagina : "+driver.getCurrentUrl());
+        driver.get("https://pre.qustodio.com/en/free-sign-up/");
+        Thread.sleep(2000);
+        Assert.assertTrue(topBarPage.isTopBarVisible(),"Top bar e present pe pagina : "+driver.getCurrentUrl());
 
 
     }

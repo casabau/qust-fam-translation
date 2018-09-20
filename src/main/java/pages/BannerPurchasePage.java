@@ -26,13 +26,13 @@ public class BannerPurchasePage {
     @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]")
     private WebElement banner;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[2]/div/div[1]/a")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[3]/div/div[1]/a")
     private WebElement buySmallButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[2]/div/div[2]/a")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[3]/div/div[2]/a")
     private WebElement buyMediumButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[2]/div/div[3]/a")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"page\"]/div[2]/div[1]/div[1]/div[3]/div/div[3]/a")
     private WebElement buyLarge;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"iFrameResizer0\"]")
@@ -98,7 +98,7 @@ public class BannerPurchasePage {
         driver.get(url);
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(banner));
-        wait.until(ExpectedConditions.visibilityOf(buyMediumButton));
+//        wait.until(ExpectedConditions.visibilityOf(buyMediumButton));
 
         buySmallButton.click();
 
@@ -176,7 +176,7 @@ public class BannerPurchasePage {
         driver.get(url);
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(banner));
-        wait.until(ExpectedConditions.visibilityOf(buyMediumButton));
+       // wait.until(ExpectedConditions.visibilityOf(buyMediumButton));
 
         buyMediumButton.click();
 
@@ -253,7 +253,7 @@ public class BannerPurchasePage {
         driver.get(url);
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(banner));
-        wait.until(ExpectedConditions.visibilityOf(buyLarge));
+      //  wait.until(ExpectedConditions.visibilityOf(buyLarge));
 
         buyLarge.click();
 

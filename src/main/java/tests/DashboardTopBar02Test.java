@@ -40,11 +40,11 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
 
         dashboardTopBar02Page.LoginFlow();
         wait.until(ExpectedConditions.urlMatches("https://fp-pre.qustodio.com/user-activity/summary"));
-        //JavascriptExecutor executor= (JavascriptExecutor)driver;
+        JavascriptExecutor executor= (JavascriptExecutor)driver;
 
         //dashboardtopBarPage.closeBanner();
         dashboardTopBar02Page.ChangeLanguage("en");
-        //executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"christmas_2017_topbar01\");");
+        executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"halloween_2018_topbar\");");
         wait.until(ExpectedConditions.elementToBeClickable(dashboardTopBar02Page.TopBar));
         try {
             Assert.assertTrue(dashboardTopBar02Page.isTopBarVisible());
@@ -61,10 +61,10 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
 
         dashboardTopBar02Page.clickTopBar();
 
-
+      //  Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
 
         dashboardTopBar02Page.ChangeLanguage("es");
-       // executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"christmas_2017_topbar01\");");
+        executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"halloween_2018_topbar\");");
         wait.until(ExpectedConditions.elementToBeClickable(dashboardTopBar02Page.TopBar));
         try {
             Assert.assertTrue(dashboardTopBar02Page.isTopBarVisible());
@@ -81,10 +81,10 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
 
         dashboardTopBar02Page.clickTopBar();
 
-       // Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/christmas2017-retrial" );
+     //   Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
 
         dashboardTopBar02Page.ChangeLanguage("fr");
-       // executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"christmas_2017_topbar01\");");
+        executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"halloween_2018_topbar\");");
         wait.until(ExpectedConditions.elementToBeClickable(dashboardTopBar02Page.TopBar));
         try {
             Assert.assertTrue(dashboardTopBar02Page.isTopBarVisible());
@@ -102,8 +102,10 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
 
       //  Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/christmas2017-retrial" );
 
+     //   Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
+
         dashboardTopBar02Page.ChangeLanguage("it");
-       // executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"christmas_2017_topbar01\");");
+        executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"halloween_2018_topbar\");");
         wait.until(ExpectedConditions.elementToBeClickable(dashboardTopBar02Page.TopBar));
         try {
             Assert.assertTrue(dashboardTopBar02Page.isTopBarVisible());
@@ -121,8 +123,10 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
 
     //    Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/christmas2017-retrial" );
 
+     //   Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
+
         dashboardTopBar02Page.ChangeLanguage("pt_BR");
-      //  executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"christmas_2017_topbar01\");");
+        executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"halloween_2018_topbar\");");
         wait.until(ExpectedConditions.elementToBeClickable(dashboardTopBar02Page.TopBar));
         try {
             Assert.assertTrue(dashboardTopBar02Page.isTopBarVisible());
@@ -140,8 +144,10 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
 
    //     Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/christmas2017-retrial" );
 
+      //  Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
+
         dashboardTopBar02Page.ChangeLanguage("de");
-     //   executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"christmas_2017_topbar01\");");
+        executor.executeScript("QFP.Controllers.Layout.Notifications.showTopBanner(\"halloween_2018_topbar\");");
         wait.until(ExpectedConditions.elementToBeClickable(dashboardTopBar02Page.TopBar));
         try {
             Assert.assertTrue(dashboardTopBar02Page.isTopBarVisible());
@@ -156,7 +162,7 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
             System.out.println("Expected: " +dashboardTopBar02model.getDeTranslate()+"\nActual: "+DeTopBarTranslation);
         }
         dashboardTopBar02Page.clickTopBar();
-  //      Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/christmas2017-retrial" );
+        //Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
     }
 
 }
