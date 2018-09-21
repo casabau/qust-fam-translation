@@ -61,6 +61,8 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
 
         dashboardTopBar02Page.clickTopBar();
 
+        dashboardTopBar02Page.checkIfFlyoverIsDisplayed();
+
       //  Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
 
         dashboardTopBar02Page.ChangeLanguage("es");
@@ -80,7 +82,7 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
         }
 
         dashboardTopBar02Page.clickTopBar();
-
+        dashboardTopBar02Page.checkIfFlyoverIsDisplayed();
      //   Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
 
         dashboardTopBar02Page.ChangeLanguage("fr");
@@ -99,7 +101,7 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
             System.out.println("Expected: " +dashboardTopBar02model.getFrTranslate()+"\nActual: "+FrTopBarTranslation);
         }
         dashboardTopBar02Page.clickTopBar();
-
+        dashboardTopBar02Page.checkIfFlyoverIsDisplayed();
       //  Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/christmas2017-retrial" );
 
      //   Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
@@ -120,7 +122,7 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
             System.out.println("Expected: " +dashboardTopBar02model.getItTranslate()+"\nActual: "+ItTopBarTranslation);
         }
         dashboardTopBar02Page.clickTopBar();
-
+        dashboardTopBar02Page.checkIfFlyoverIsDisplayed();
     //    Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/christmas2017-retrial" );
 
      //   Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
@@ -141,6 +143,7 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
             System.out.println("Expected: " +dashboardTopBar02model.getPtTranslate()+"\nActual: "+PtTopBarTranslation);
         }
         dashboardTopBar02Page.clickTopBar();
+        dashboardTopBar02Page.checkIfFlyoverIsDisplayed();
 
    //     Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/christmas2017-retrial" );
 
@@ -162,6 +165,7 @@ public class DashboardTopBar02Test extends BaseTestPublicSite{
             System.out.println("Expected: " +dashboardTopBar02model.getDeTranslate()+"\nActual: "+DeTopBarTranslation);
         }
         dashboardTopBar02Page.clickTopBar();
+        dashboardTopBar02Page.checkIfFlyoverIsDisplayed();
         //Assert.assertEquals(driver.getCurrentUrl(), "https://fp-pre.qustodio.com/bts2018" );
     }
 

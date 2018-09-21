@@ -6,16 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-public class DashboardTopBar02Page {
+public class DashboardBannerPage {
     WebDriver driver;
 
-    public DashboardTopBar02Page(WebDriver driverLn) {
+    public DashboardBannerPage(WebDriver driverLn) {
         {
             this.driver = driverLn;
         }
@@ -78,12 +76,6 @@ public class DashboardTopBar02Page {
     @FindBy (how = How.XPATH, using = " //*[@id=\"cboxContent\"]")
     private WebElement flyover;
 
-    @FindBy (how = How.XPATH, using = "/html/body/div/div[1]")
-    private WebElement halloweenFlyover;
-
-    @FindBy (how = How.XPATH, using = "//*[@id=\"cboxClose\"]")
-    private WebElement closeFlyoverButton;
-
 
 
     public void LoginFlow() throws InterruptedException {
@@ -92,7 +84,7 @@ public class DashboardTopBar02Page {
         wait.until(ExpectedConditions.elementToBeClickable(emailField));
         emailField.click();
         emailField.clear();
-        emailField.sendKeys("adytestare+bts-free@gmail.com");
+        emailField.sendKeys("adytestare+freesub30@gmail.com");
         wait.until(ExpectedConditions.elementToBeClickable(passwordField));
         passwordField.click();
         passwordField.clear();
@@ -140,15 +132,6 @@ public class DashboardTopBar02Page {
 
     public void clickSelect(){
         this.clickSelect.click();
-    }
-
-
-    public void checkIfFlyoverIsDisplayed(){
-        WebDriverWait wait = new WebDriverWait(driver,20);
-        wait.until(ExpectedConditions.visibilityOf(halloweenFlyover));
-        Assert.assertTrue(halloweenFlyover.isDisplayed());
-        wait.until(ExpectedConditions.elementToBeClickable(closeFlyoverButton));
-        closeFlyoverButton.click();
     }
 
     public void ChangeLanguage(String value) throws InterruptedException{
